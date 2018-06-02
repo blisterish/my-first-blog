@@ -1,21 +1,19 @@
 <html>
   <head>
-      <title>Falling in love with Labskaus</title>
+      <title>Falling in love with South America</title>
   </head>
   <body>
       <div>
-        <h1>Falling in love with <a href="https://en.wikipedia.org/wiki/Labskaus">Labskaus</a></h1>
-      </div>
-      <p><h2><em>All you need to know about this special Northern Germany dish!</em></h2></p>
-
-      <div>
-    <p><h3>1. It is delicious</h3></p>
-        <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        <h1>Falling in love with South America</a></h1>
       </div>
 
+      <p><h2><em>All you need to know about this special continent!</em></h2></p>
+{% for post in posts %}
       <div>
-      <p><h3>2. You don't need to be German to enjoy it!</h3></p>
-      <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-    </div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+      </div>
+{% endfor %}
   </body>
 </html>
